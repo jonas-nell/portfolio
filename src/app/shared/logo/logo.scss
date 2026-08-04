@@ -1,36 +1,36 @@
 .logo-wrapper {
     display: flex;
     font-weight: bold;
-    height: 3rem;
-    width: 6rem;
-    font-size: 3.2rem;
+    height: 2rem;
+    width: 4rem;
+    font-size: 2rem;
     position: relative;
 
     .logo-left {
         width: 1.2rem;
-        border-top: 0.4rem solid black;
-        border-left: 0.4rem solid black;
-        border-bottom: 0.4rem solid black;
+        border-top: 0.35rem solid black;
+        border-left: 0.35rem solid black;
+        border-bottom: 0.35rem solid black;
     }
 
     .logo-right {
         width: 1.2rem;
-        border-top: 0.4rem solid black;
-        border-bottom: 0.4rem solid black;
-        border-right: 0.4rem solid black;
+        border-top: 0.35rem solid black;
+        border-bottom: 0.35rem solid black;
+        border-right: 0.35rem solid black;
     }
     
     .logo-text {
         display: flex;
         gap: 0.1rem;
-        top: -0.4rem;
+        top: -0.2rem;
 
         .j {
-            top: -0.28rem;
+            top: -0.1rem;
         }
 
         .n {
-            top: 0.2rem;
+            top: 0.1rem;
         }
     }
 
@@ -43,7 +43,7 @@
 
         rotate: 10deg;
 
-        width: 0.66rem;
+        width: 0.44rem;
         height: 100%;
 
         background-color: var(--cream);
