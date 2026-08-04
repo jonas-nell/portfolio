@@ -1,4 +1,11 @@
 @use 'styles/colors';
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/syne-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 * {
     margin: 0;
@@ -17,4 +24,15 @@
 
 body {
     background-color: var(--cream);
+    font-family: "Syne";
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1440px;
+    padding: 1rem 2rem;
 }
