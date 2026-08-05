@@ -1,4 +1,60 @@
-h1 {
-    font-size: 4rem;
-    text-align: center;
+.hero-section{
+    height: 100dvh;
+    
+    .content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            top: -20%;
+        }
+
+        .name-tag{
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            top: -20%;
+
+            
+
+            img{
+                width: 55%;
+            }
+
+            .name{
+                color: var(--mint);
+                font-family: "Overpass";
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+
+        .mail{
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+
+            writing-mode: sideways-lr;
+            font-family: Overpass;
+            font-size: 1.8rem;
+        }
+
+        .hero-right{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            right: 2rem;
+            top: 50%;
+            gap: 1.2rem;
+
+            font-family: Overpass;
+            font-size: 1.8rem;
+        }
+    }
+
 }
