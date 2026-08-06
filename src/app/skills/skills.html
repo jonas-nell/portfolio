@@ -1,0 +1,20 @@
+<section class="skills">
+    <div class="content">
+        <h2>My skills</h2>
+        <div class="skills-gallery">
+            @for (skill of skills; track skill.name){
+                <div class="skill">
+                    <img [src]="skill.icon" [alt]="skill.name">
+                    <span>{{ skill.name }}</span>
+                </div>
+            }
+            <figure>
+                <img src="/assets/icons/learning.svg" alt="">
+                <figcaption>Don't see the skill you need? <br>
+                Contact me <br>
+                I'm always ready to learn!
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>

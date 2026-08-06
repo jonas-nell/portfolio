@@ -1,0 +1,54 @@
+.skills{
+    .content{
+        flex-direction: column;
+
+        h2{
+            font-size: 2.8rem;
+            top: 1.5rem;
+            background: var(--cream);
+            padding: 0 2rem;
+
+            z-index: 1;
+        }
+    }
+}
+
+.skills-gallery{
+    display: flex;
+    justify-content: space-around;
+    gap: 2.8rem;
+    flex-wrap: wrap;
+
+    border: 0.3rem solid black;
+    padding: 3.8rem 1.8rem;
+
+    .skill{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+
+        text-align: center;
+        font-family: Overpass;
+        font-weight: 700;
+        font-size: 1.6rem;
+        
+        width: 6rem;
+
+        img{
+            width: 6rem;
+        }
+    }
+
+    figure{
+        display: flex;
+        font-size: 1.8rem;
+        font-family: Overpass;
+        gap: 2rem;
+
+        img{
+            width: 6rem;
+        }
+
+    }
+}
