@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+interface Skill {
+    name: string;
+    icon: string;
+}
+
 @Component({
     selector: 'app-skills',
     imports: [],
@@ -7,7 +12,7 @@ import { Component } from '@angular/core';
     styleUrl: './skills.scss',
 })
 export class Skills {
-    skills = [
+    skills: Skill[] = [
         {
             name: 'Angular',
             icon: '/assets/icons/angular-icon.svg',

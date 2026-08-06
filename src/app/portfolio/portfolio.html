@@ -1,0 +1,25 @@
+<section class="portfolio">
+    <div class="content">
+        <h2>Portfolio</h2>
+        <p>
+            Expolre a selection of my work here - Interact with projects to see my skills in action.
+        </p>
+        @for (project of projects; track project.id){
+            <div class="project-card">
+                <span class="counter">{{ $index + 1 }} / {{ projects.length }}</span>
+                <a [href]="project.liveUrl" target ="_blank">
+                    <img [src]="project.image" alt="project.name + 'screenshot">
+                </a>
+                <h3>{{ project.name }}</h3>
+                <div class="technologies">
+                    @for (tech of project.technologies; track tech){
+                        <span class="technology">{{ tech }}</span>
+                    }
+                </div>
+                <p>{{ project.description }}</p>
+
+                <a [href]="project.githubUrl" target="_blank">Github</a>
+            </div>
+        }
+    </div>
+</section>

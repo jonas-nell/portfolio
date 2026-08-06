@@ -5,10 +5,11 @@ import { Hero } from "./hero/hero";
 import { AboutMe } from "./about-me/about-me";
 import { SectionIntermission } from "./shared/section-intermission/section-intermission";
 import { Skills } from "./skills/skills";
+import { Portfolio } from "./portfolio/portfolio";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Hero, AboutMe, SectionIntermission, Skills],
+  imports: [RouterOutlet, Header, Hero, AboutMe, SectionIntermission, Skills, Portfolio],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
