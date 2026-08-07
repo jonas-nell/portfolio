@@ -49,6 +49,14 @@
         img{
             width: 6rem;
         }
+        
+        a {
+            color: var(--mint);
+
+            &:hover{
+                font-weight: bold;
+            }
+        }
 
     }
 }
