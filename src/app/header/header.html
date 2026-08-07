@@ -1,9 +1,20 @@
 <header>
     <div class="content">
         <app-logo></app-logo>
-    
-        <button class="nav-button">
-            <img src="./assets/icons/burger-icon.svg" alt="">
+        <div class="lang-buttons">
+            <button type="button">DE</button>
+            <button type="button">EN</button>
+        </div>
+        <button class="nav-button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+            @if (menuOpen()) {
+                <img src="./assets/icons/close-button.svg" alt="">
+            } @else {
+                <img src="./assets/icons/burger-icon.svg" alt="">
+            }
         </button>
     </div>
 </header>
+
+@if (menuOpen()) {
+    <app-nav-menu (close)="closeMenu()"></app-nav-menu>
+}
