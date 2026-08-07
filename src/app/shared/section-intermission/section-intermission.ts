@@ -13,9 +13,9 @@ export class SectionIntermission implements OnDestroy {
     @HostBinding('style.display') display = 'block';
 
     readonly frames = [
-        'assets/arrows/arrow-left-1.svg',
-        'assets/arrows/arrow-left-2.svg',
-        'assets/arrows/arrow-left-3.svg',
+        './assets/arrows/arrow-left-1.svg',
+        './assets/arrows/arrow-left-2.svg',
+        './assets/arrows/arrow-left-3.svg',
     ];
 
     private frameIndex = signal(0);

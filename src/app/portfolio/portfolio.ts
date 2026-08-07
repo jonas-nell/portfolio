@@ -21,7 +21,7 @@ export class Portfolio {
         {
             id: 1,
             name: 'El Pollo Loco',
-            image: '/assets/img/el-pollo-loco.png',
+            image: './assets/img/el-pollo-loco.png',
             liveUrl: 'https://jonasnell.developerakademie.net/el_pollo_loco/',
             githubUrl: 'https://github.com/jonas-nell/el-pollo-loco',
             technologies: ['JavaScript', 'HTML', 'CSS'],
