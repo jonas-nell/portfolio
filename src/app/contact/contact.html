@@ -1,1 +1,61 @@
-<p>contact works!</p>
+<section class="contact-section">
+    <div class="content">
+        <div>schräge</div>
+        <h2>Say hi!</h2>
+        <p class="green">Want to discuss a new project?</p>
+        <p>Say hello! Let's discuss your ideas and make it happen.</p>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+            <div class="field">
+                <label for="name">Your Name</label>
+                <input id="name" type="text" formControlName="name"/>
+                @if (name.invalid && name.touched) {
+                    <span class="error">
+                        @if (name.errors?.['required']) {
+                            Your name is required.
+                        } @else if (name.errors?.['minlength']) {
+                            Your name must be at least 2 characters.
+                        }
+                    </span>
+                }
+            </div>
+            <div class="field">
+                <label for="email">Your Email</label>
+                <input id="email" type="email" formControlName="email" />
+                @if (email.invalid && email.touched) {
+                    <span class="error">
+                        @if (email.errors?.['required']) {
+                            Your Email is required.
+                        } @else if (email.errors?.['email']) {
+                            Please enter a valid email adress.
+                        }
+                    </span>
+                }
+            </div>
+            <div class="field">
+                <label for="message">Your message</label>
+                <textarea id="message" rows="5" formControlName="message"></textarea>
+                @if (message.invalid && message.touched) {
+                    <span class="error">
+                        @if (message.errors?.['required']) {
+                            Your message is required.
+                        } @else if (message.errors?.['minlength']) {
+                            Message must be at least 10 characters.
+                        }
+                    </span>
+                }
+            </div>
+            <div class="field checkbox">
+                <label>
+                    <input type="checkbox" formControlName="privacyAccepted" />
+                    I've read the privacy policy and agree to the processing of my data as outlined.
+                </label>
+                @if (privacyAccepted.invalid && privacyAccepted.touched) {
+                    <span class="error">
+                        You must accept the privacy policy.
+                    </span>
+                }
+            </div>
+            <button type="submit">Say hello ;)</button>
+        </form>
+    </div>
+</section>
