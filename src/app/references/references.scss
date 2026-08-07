@@ -1,0 +1,42 @@
+.references{
+    font-family: Overpass;
+    font-size: 1.6rem;
+
+    .content{
+        flex-direction: column;
+        gap: 2.6rem;
+
+        h2{
+            font-size: 2.8rem;
+            font-family: Syne;
+        }
+
+        .ref-wrapper{
+            border: 0.3rem black solid;
+            width: 30rem;
+            height: 30rem;
+
+            padding: 3rem;
+            gap: 3rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .ref-name{
+                font-family: Syne;
+                font-weight: 400;
+                top: -2rem;
+            }
+
+            .ref-role{
+                font-family: Overpass;
+                top: -4rem;
+            }
+
+            .ref-quote{
+                top: -4rem;
+            }
+        }
+    }
+}
