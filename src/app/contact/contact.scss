@@ -1,22 +1,39 @@
-.contact-section{
-    .content{
-        flex-direction: column;
-        background-color: black;
-        color: var(--cream);
-        gap: 2.4rem;
+.contact-section {
+    background-color: black;
 
-        h2{
-            font-size: 2.8rem;
+    .diagonal {
+        height: 8vw;
+        width: 100%;
+        background: var(--cream);
+        overflow: hidden;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: black;
+            clip-path: polygon(0% 0%, 100% 100%, 100% 100%, 0% 100%);
         }
-
-        .green{
+}
+.content {
+    flex-direction: column;
+    color: var(--cream);
+    gap: 2.4rem;
+    
+    
+    h2 {
+        font-size: 2.8rem;
+    }
+    
+    
+    .green {
             color: var(--mint);
             font-size: 2.8rem;
             font-family: Overpass;
             text-align: center;
             font-weight: bold;
         }
-        
+
         p {
             font-family: Overpass;
             text-align: center;
@@ -39,27 +56,28 @@
             font-size: 1.8rem;
             margin-top: 1.6rem;
 
-            input, textarea{
+            input,
+            textarea {
                 padding: 0.8rem;
                 font-size: 1.6rem;
                 border: 0.3rem solid transparent;
                 border-bottom: 0.3rem solid var(--cream);
 
-                &::placeholder{
+                &::placeholder {
                     color: var(--cream);
                     opacity: 0.7;
                 }
 
-                &:focus{
+                &:focus {
                     outline: none;
                     border-color: var(--cream);
                 }
             }
 
-            label{
+            label {
                 position: absolute;
                 width: fit-content;
-                top:-1rem;
+                top: -1rem;
                 left: 0.8rem;
                 opacity: 0;
                 pointer-events: none;
@@ -70,11 +88,11 @@
             input:focus ~ label,
             textarea:focus ~ label,
             input:not(:placeholder-shown) ~ label,
-            textarea:not(:placeholder-shown) ~ label{
+            textarea:not(:placeholder-shown) ~ label {
                 opacity: 1;
             }
 
-            &.checkbox label{
+            &.checkbox label {
                 position: relative;
                 width: auto;
                 opacity: 1;
@@ -86,7 +104,7 @@
             }
         }
 
-        .error{
+        .error {
             color: red;
             font-size: 1.6rem;
             min-height: 3.2rem;
@@ -103,7 +121,7 @@
             padding: 1.2rem 2.8rem;
             cursor: pointer;
 
-            &.valid{
+            &.valid {
                 color: var(--cream);
                 border-color: var(--cream);
             }
