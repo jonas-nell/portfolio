@@ -1,69 +1,38 @@
-// .logo-wrapper {
-//     display: flex;
-//     font-weight: bold;
-//     height: 2.4rem;
-//     width: 5rem;
-//     font-size: 1.9rem;
-    
-//     .logo-text {
-//         position: absolute;
-//         inset: 0;
-//         display: flex;
-//         gap: 0.2rem;
-
-
-//         .j {
-    //         }
-    //             top: -0.2rem;
-
-//         .n {
-//             top: 0.2rem;
-//         }
-//     }
-
-//     .logo-middle{
-//         position: absolute;
-//         left: 41%;
-//         top: 50%;
-//         transform: translate(-50%, -50%);
-//         z-index: 9000;
-
-//         rotate: 10deg;
-
-//         width: 0.44rem;
-//         height: 100%;
-
-//         background-color: var(--cream);
-//     }
-// }
-
 .logo-wrapper{
     font-size: 2.5rem;
     font-weight: 800;
     display: flex;
     height: 2.5rem;
     width: 100%;
+
+    --logo-fg: black;
+    --logo-bg: var(--cream);
+
+    &.inverted{
+        --logo-fg: var(--cream);
+        --logo-bg: black;
+    }
 }
 
 .logo-left{
     height: 100%;
     width: 1rem;
-    border-left: 0.5rem solid black;
-    border-top: 0.5rem solid black;
-    border-bottom: 0.5rem solid black;
+    border-left: 0.5rem solid var(--logo-fg);
+    border-top: 0.5rem solid var(--logo-fg);
+    border-bottom: 0.5rem solid var(--logo-fg);
 }
 
 .logo-right{
     height: 100%;
     width: 1rem;
-    border-right: 0.5rem solid black;
-    border-top: 0.5rem solid black;
-    border-bottom: 0.5rem solid black;
+    border-right: 0.5rem solid var(--logo-fg);
+    border-top: 0.5rem solid var(--logo-fg);
+    border-bottom: 0.5rem solid var(--logo-fg);
     left: -7%;
 }
 
 .logo-middle{
-    background-color: var(--cream);
+    background-color: var(--logo-bg);
 
     position: absolute;
     left: 38%;
@@ -77,12 +46,16 @@
     z-index: 1001;
 }
 
-.j {
-    top: -0.55rem;
-    left: -5%;
-}
+.logo-text{
+    color: var(--logo-fg);
 
-.n {
-    top: -0.1rem;
-    left: -10%;
+    .j {
+        top: -0.55rem;
+        left: -5%;
+    }
+    
+    .n {
+        top: -0.1rem;
+        left: -10%;
+    }
 }
