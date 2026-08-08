@@ -3,9 +3,11 @@ header{
     top: 0;
     z-index: 1000;
     background-color: var(--cream);
+    height: 7.5rem;
 
     .content{
         justify-content: space-between;
+        flex-direction: row;
     }
 }
 

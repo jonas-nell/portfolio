@@ -1,11 +1,10 @@
-.hero-section{
+.hero-section {
     height: 100dvh;
-    
-    .content{
+
+    .content {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
 
         h1 {
             font-size: 3.5rem;
@@ -13,27 +12,25 @@
             top: -20%;
         }
 
-        .name-tag{
+        .name-tag {
             display: flex;
             justify-content: center;
             gap: 0.8rem;
             top: -20%;
 
-            
-
-            img{
+            img {
                 width: 55%;
             }
 
-            .name{
+            .name {
                 color: var(--mint);
-                font-family: "Overpass";
+                font-family: 'Overpass';
                 font-size: 2rem;
                 font-weight: 700;
             }
         }
 
-        .mail{
+        .mail {
             position: absolute;
             left: 2rem;
             top: 50%;
@@ -43,18 +40,37 @@
             font-size: 1.8rem;
         }
 
-        .hero-right{
+        .hero-right {
             position: absolute;
             display: flex;
             flex-direction: column;
             align-items: center;
             right: 2rem;
             top: 50%;
-            gap: 1.2rem;
+            gap: 3rem;
 
             font-family: Overpass;
             font-size: 1.8rem;
+
+            .arrow-window {
+                height: 3rem;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                animation: sink-into-text 1.2s linear infinite;
+            }
+        }
+
+        @keyframes sink-into-text {
+            0% {
+                transform: translateY(-50%);
+            }
+            100% {
+                transform: translateY(40%);
+            }
         }
     }
-
 }
