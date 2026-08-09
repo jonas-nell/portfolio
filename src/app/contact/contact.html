@@ -47,7 +47,7 @@
             <div class="field checkbox">
                 <label>
                     <input type="checkbox" formControlName="privacyAccepted" />
-                    I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.
+                    <span>I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
                 </label>
                 <span class="error">
                 @if (privacyAccepted.invalid && privacyAccepted.touched) {
