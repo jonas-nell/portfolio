@@ -15,12 +15,63 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 9rem;
+        gap: 7rem;
 
         a {
             font-size: 3.4rem;
             font-family: Syne;
             font-weight: bold;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+
+            .nav-link-style-left {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2.5rem;
+                width: 2.5rem;
+                border-left: 0.4rem black solid;
+                border-bottom: 0.4rem black solid;
+                transition: opacity 0.2s ease;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 0.4rem;
+                background: black;
+                opacity: 0;
+            }
+
+            &:hover {
+                .nav-link-style-left{
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 1;
+                    animation: underline-grow 0.4s ease forwards;
+                }
+            }
+        }
+    }
+
+    @keyframes underline-grow {
+        0% {
+            left: 0;
+            width: 0;
+        }
+        50% {
+            left: 0;
+            width: 100%;
+        }
+        100% {
+            left: 50%;
+            width: 50%;
         }
     }
     
