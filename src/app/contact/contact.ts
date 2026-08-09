@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from "@angular/router";
+import emailjs from '@emailjs/browser';
 
 @Component({
     selector: 'app-contact',
@@ -12,6 +13,12 @@ export class Contact {
     form: FormGroup;
 
     submitted = false;
+    sending = false;
+    sendError = false;
+
+    private readonly SERVICE_ID = 'service_0zfv1pk';
+    private readonly TEMPLATE_ID = 'template_emhljpx';
+    private readonly PUBLIC_KEY = 'dKlu2Rv5rGj1nE4_0';
 
     constructor(private fb: FormBuilder){
         this.form = this.fb.group({
@@ -40,16 +47,35 @@ export class Contact {
     
     onSubmit(){
         this.submitted = true;
+        this.sendError = false;
 
         if (this.form.invalid){
             this.form.markAllAsTouched();
             return;
         }
-        // send email later:
-        console.log('Placeholder: Form values:', this.form.value);
 
-        this.form.reset();
-        this.submitted = false;
+        this.sending = true;
+
+        const templateParams = {
+            name: this.name.value,
+            email:this.email.value,
+            message: this.message.value,
+        };
+
+        emailjs.send(this.SERVICE_ID, this.TEMPLATE_ID, templateParams, {
+            publicKey: this.PUBLIC_KEY,
+        })
+        .then(() => {
+            this.form.reset();
+            this.submitted = false;
+        })
+        .catch((err) => {
+            console.error('EmailJS error:', err);
+            this.sendError = true;
+        })
+        .finally(() => {
+            this.sending = false;
+        });
     }
 
 }
