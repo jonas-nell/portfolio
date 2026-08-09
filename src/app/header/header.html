@@ -3,8 +3,8 @@
         <app-logo></app-logo>
         @if (menuOpen()) {
             <div class="lang-buttons">
-                <button type="button">EN</button>
-                <button type="button">DE</button>
+                <button type="button" (click)="changeLanguage('en')" [class.active] = "isActiveLanguage('en')">EN</button>
+                <button type="button" (click)="changeLanguage('de')" [class.active] = "isActiveLanguage('de')">DE</button>
             </div>
         }
         <button class="nav-button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
