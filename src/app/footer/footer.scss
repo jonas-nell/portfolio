@@ -1,3 +1,5 @@
+@use '../../styles/breakpoints' as *;
+
 footer {
     background: black;
     color: var(--cream);
@@ -14,8 +16,22 @@ footer {
             justify-content: center;
             gap: 5.6rem;
 
+            @include tablet{
+                gap: 6.4rem;
+            }
+            @include desktop {
+                gap: 8.6rem;
+            }
+
             img{
                 height: 4rem;
+
+                @include tablet {
+                    height: 6rem;
+                }
+                @include desktop{
+                    height: 8rem;
+                }
             }
         }
         

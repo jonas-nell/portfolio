@@ -1,3 +1,5 @@
+@use '../../styles/breakpoints' as *;
+
 .hero-section {
     height: 100dvh;
 
@@ -10,6 +12,16 @@
             font-size: 3.5rem;
             text-align: center;
             top: -20%;
+
+            @include tablet {
+                font-size: 4.8rem;
+            }
+            @include desktop {
+                font-size: 5.6rem;
+            }
+            @include wide {
+                font-size: 6.2rem;
+            }
         }
 
         .name-tag {
@@ -27,6 +39,17 @@
                 font-family: 'Overpass';
                 font-size: 2rem;
                 font-weight: 700;
+
+                @include tablet {
+                    font-size: 2.4rem;
+                }
+                @include desktop {
+                    font-size: 2.8rem;
+                }
+                @include wide {
+                    font-size: 3.4rem;
+                    top: 2rem;
+                }
             }
         }
 
@@ -38,6 +61,18 @@
             writing-mode: sideways-lr;
             font-family: Overpass;
             font-size: 1.8rem;
+
+            @include tablet {
+                left: 4rem;
+                font-size: 2.4rem;
+            }
+            @include desktop {
+                left: 6rem;
+            }
+            @include wide {
+                left: 10rem;
+                font-size: 2.8rem;
+            }
         }
 
         .hero-right {
@@ -52,11 +87,29 @@
             font-family: Overpass;
             font-size: 1.8rem;
 
+            @include tablet {
+                right: 4rem;
+                gap: 5rem;
+                font-size: 2.4rem;
+            }
+
+            @include desktop {
+                right: 6rem;
+            }
+            @include wide {
+                right: 10rem;
+                font-size: 2.8rem;
+            }
+
             .arrow-window {
                 height: 3rem;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
+
+                @include tablet {
+                    height: 4.5rem;
+                }
             }
 
             img {
