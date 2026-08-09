@@ -101,6 +101,14 @@
                 display: flex;
                 align-items: center;
                 gap: 0.8rem;
+
+                a {
+                    color: var(--mint);
+
+                    &:hover{
+                        font-weight: bold;
+                    }
+                }
             }
         }
 
