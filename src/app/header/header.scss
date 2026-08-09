@@ -12,11 +12,28 @@ header{
     .content{
         justify-content: space-between;
         flex-direction: row;
+
+        .lang-buttons{
+            display: flex;
+            gap: 2rem;
+
+            button{
+                border: 1px solid transparent;
+                cursor: pointer;
+                font-size: 2.2rem;
+                padding: 1rem;
+
+                &.active{
+                    border: 1px solid var(--mint);
+                }
+            }
+        }
     }
 }
 
 .nav-button img{
     height: 2.4rem;
+    cursor: pointer;
 
     @include tablet{
         height: 3.2rem;
