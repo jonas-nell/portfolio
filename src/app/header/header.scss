@@ -1,9 +1,13 @@
+@use '../../styles/breakpoints' as *;
+
 header{
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--cream);
     height: 7.5rem;
+    display: flex;
+    align-items: center;
 
     .content{
         justify-content: space-between;
@@ -13,4 +17,11 @@ header{
 
 .nav-button img{
     height: 2.4rem;
+
+    @include tablet{
+        height: 3.2rem;
+    }
+    @include desktop {
+        height: 3.6rem;
+    }
 }

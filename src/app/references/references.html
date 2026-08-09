@@ -2,13 +2,15 @@
     <div class="content">
         <h2>References</h2>
         <p>I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.</p>
-        @for (reference of references; track reference.name) {
-            <div class="ref-wrapper">
-                <img src="./assets/icons/quote.svg" alt="">
-                <p class="ref-name">{{ reference.name }}</p>
-                <p class="ref-role">{{ reference.role }}</p>
-                <p class="ref-quote">{{ reference.quote }}</p>
-            </div>
-        }
+        <div class="ref-gallery">
+            @for (reference of references; track reference.name) {
+                <div class="ref-wrapper">
+                    <img src="./assets/icons/quote.svg" alt="">
+                    <p class="ref-name">{{ reference.name }}</p>
+                    <p class="ref-role">{{ reference.role }}</p>
+                    <p class="ref-quote">{{ reference.quote }}</p>
+                </div>
+            }
+        </div>
     </div>
 </section>

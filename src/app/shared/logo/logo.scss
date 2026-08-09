@@ -1,3 +1,5 @@
+@use '../../../styles/breakpoints' as *;
+
 .logo-wrapper{
     font-size: 2.5rem;
     font-weight: 800;
@@ -7,6 +9,15 @@
 
     --logo-fg: black;
     --logo-bg: var(--cream);
+
+    @include tablet {
+        font-size: 2.9rem;
+        height: 2.9rem;
+    }
+    @include desktop {
+        font-size: 3.6rem;
+        height: 3.6rem;
+    }
 
     &.inverted{
         --logo-fg: var(--cream);
@@ -20,6 +31,11 @@
     border-left: 0.5rem solid var(--logo-fg);
     border-top: 0.5rem solid var(--logo-fg);
     border-bottom: 0.5rem solid var(--logo-fg);
+
+    @include desktop {
+        border-width: 0.7rem;
+        width: 1.3rem;
+    }
 }
 
 .logo-right{
@@ -29,6 +45,11 @@
     border-top: 0.5rem solid var(--logo-fg);
     border-bottom: 0.5rem solid var(--logo-fg);
     left: -7%;
+
+    @include desktop {
+        border-width: 0.7rem;
+        width: 1.3rem;
+    }
 }
 
 .logo-middle{
@@ -44,6 +65,10 @@
     rotate: 10deg;
 
     z-index: 1001;
+
+    @include desktop {
+        width: 0.8rem;
+    }
 }
 
 .logo-text{

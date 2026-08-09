@@ -1,14 +1,19 @@
+@use '../../styles/breakpoints' as *;
+
 .skills{
     .content{
         flex-direction: column;
 
         h2{
-            font-size: 2.8rem;
             top: 1.5rem;
             background: var(--cream);
             padding: 0 2rem;
 
             z-index: 1;
+
+            @include tablet{
+                top: 2rem;
+            }
         }
     }
 }
@@ -22,6 +27,14 @@
     border: 0.4rem solid black;
     padding: 3.8rem 1.8rem;
 
+    @include tablet {
+        gap: 3.2rem;
+        padding: 4rem 2rem;
+    }
+    @include desktop {
+        padding: 6rem 3rem;
+    }
+
     .skill{
         display: flex;
         flex-direction: column;
@@ -34,20 +47,38 @@
         font-size: 1.6rem;
         
         width: 6rem;
+        @include tablet{
+            width: 8rem;
+        }
 
         img{
             width: 6rem;
+
+            @include tablet {
+                width: 8rem;
+            }
         }
     }
 
     figure{
         display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 1.8rem;
         font-family: Overpass;
         gap: 2rem;
+        flex-basis: 100%;
+
+        @include desktop{
+            font-size: 2rem;
+        }
 
         img{
             width: 6rem;
+
+            @include tablet{
+                width: 8rem;
+            }
         }
         
         a {
