@@ -1,0 +1,22 @@
+.content{
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h4{
+    font-family: Overpass;
+    font-size: 2.2rem;
+    color: var(--mint);
+}
+
+p, li{
+    font-size: 1.6rem;
+}
+
+a {
+    align-self: flex-end;
+}
